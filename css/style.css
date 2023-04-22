@@ -13,6 +13,21 @@ body {
   color: #d1d5f4;
 }
 
+button {
+  font-size: 100%;
+  text-transform: uppercase;
+  font-family: "Manrope", sans-serif;
+  border: white solid 1px;
+  border-radius: 1.5em;
+  padding: 0.4em 1em;
+  background: none;
+  color: white;
+}
+button:hover {
+  border: solid #dd10c0 1px;
+  color: #dd10c0;
+}
+
 header {
   height: 100vh;
   width: 100vw;
@@ -22,6 +37,10 @@ header {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+}
+header h1 {
+  margin: 1.5em;
+  font-size: 4em;
 }
 
 .navbar {
@@ -65,7 +84,7 @@ header {
   }
   .nav-links {
     position: absolute;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(24, 56, 222, 0.8);
     -webkit-backdrop-filter: blur(5px);
             backdrop-filter: blur(5px);
     top: 0;
@@ -92,6 +111,15 @@ header {
   .navbar .nav-links ul li {
     margin: 25px 0;
     font-size: 1.5em;
+  }
+}
+@media screen and (max-width: 600px) {
+  /*     section .color-buttons {
+          flex-direction: column;
+      } */
+  section .color-buttons button {
+    margin-bottom: 1em;
+    width: 80%;
   }
 }
 .mobile-menu {
@@ -134,9 +162,24 @@ p {
   text-transform: lowercase;
 }
 
+section .color-buttons {
+  margin-top: 1em;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+}
+section .color-buttons button {
+  width: 13em;
+}
+
 section,
 footer {
   padding: 1em;
+}
+
+.photos {
+  width: 25%;
 }
 
 footer {
