@@ -1,0 +1,103 @@
+/* COULEURS */
+$background-color: #1e1674;
+$pink: #dd10c0;
+$purple: #d1d5f4;
+$footer: #1838de;
+
+/* TYPOGRAPHIES */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Tilt+Neon&display=swap");
+$title: "Tilt Neon", cursive;
+$p: "Manrope", sans-serif;
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background-color: $background-color;
+    color: $purple;
+}
+
+header {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(../img/background.png);
+    background-size: cover;
+}
+
+.navbar {
+    position: absolute;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    color: $purple;
+    & a {
+        color: $purple;
+        text-transform: uppercase;
+        font-weight: 100;
+    }
+    & ul {
+        font-family: $p;
+        font-weight: 100;
+        display: flex;
+    }
+    & .nav-links ul li{
+        margin: 0 25px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .nav-links {
+        display: none;
+    }
+}
+
+h1 {
+    font-family: $title;
+    font-weight: normal;
+    font-style: normal;
+}
+
+h2 {
+    font-weight: 200;
+}
+
+h2,
+p,
+.button,
+a {
+    font-family: $p;
+}
+
+.button {
+    border: solid white 1px;
+    padding: 0.3em;
+    border-radius: 100px;
+    width: 30%;
+    text-align: center;
+    text-transform: uppercase;
+}
+.button:hover {
+    border: solid $pink 1px;
+    color: $pink;
+}
+
+p {
+    font-weight: 100;
+    text-transform: lowercase;
+}
+
+section,
+footer {
+    padding: 1em;
+}
+
+footer {
+    background-color: $footer;
+}
