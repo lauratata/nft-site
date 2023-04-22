@@ -20,15 +20,16 @@
                     <li><a href="#"></a>offf barcelona 2023</a></li>
                 </ul>
             </div>
+            
+            <img src="img/menu-btn.png" alt="Menu hamburger" class="menu-hamburger">
         </nav>
 
         <header>
+            <h1>Medunfte</h1>
+            <button>Discover the collection</button>
         </header>
 
-        <h1>Medunfte</h1>
-        <div class="button">Discover the collection <i class="fa-thin
-                fa-arrow-right"></i></div>
-
+       
         <section>
             <h1>Abyssal</h1>
             <h2>An Nft collection</h2>
@@ -82,4 +83,14 @@
         </div>
         <a href="#">©laura taormina 2023</a>
     </footer>
+
+    <script>
+        const menuHamburger = document.querySelector(".menu-hamburger")
+        const navLinks = document.querySelector(".nav-links")
+ 
+        menuHamburger.addEventListener('click',()=>{
+        navLinks.classList.toggle('mobile-menu')
+        })
+</script>
+
 </html>

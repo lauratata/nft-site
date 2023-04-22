@@ -16,8 +16,12 @@ body {
 header {
   height: 100vh;
   width: 100vw;
-  background-image: url(../img/background.png);
+  background-image: url(../img/background.svg);
   background-size: cover;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .navbar {
@@ -34,6 +38,7 @@ header {
   color: #d1d5f4;
   text-transform: uppercase;
   font-weight: 100;
+  font-size: 1.2em;
 }
 .navbar ul {
   font-family: "Manrope", sans-serif;
@@ -44,11 +49,55 @@ header {
   margin: 0 25px;
 }
 
+.menu-hamburger {
+  display: none;
+  width: 35px;
+}
+
 @media screen and (max-width: 900px) {
+  .navbar {
+    padding: 0;
+  }
+  .logo {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+  }
   .nav-links {
-    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.2);
+    -webkit-backdrop-filter: blur(5px);
+            backdrop-filter: blur(5px);
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -100%;
+    transition: all 0.5s ease-in-out;
+  }
+  .nav-links ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .menu-hamburger {
+    display: block;
+    top: 25px;
+    position: absolute;
+    right: 25px;
+  }
+  .navbar .nav-links ul li {
+    margin: 25px 0;
+    font-size: 1.5em;
   }
 }
+.mobile-menu {
+  margin-left: 0;
+}
+
 h1 {
   font-family: "Tilt Neon", cursive;
   font-weight: normal;
