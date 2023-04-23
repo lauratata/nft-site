@@ -39,10 +39,21 @@ header {
   justify-content: center;
 }
 header h1 {
-  margin: 1.5em;
+  margin: 1em;
   font-size: 4em;
+  color: #ffeffd;
+  animation: flicker 3s linear infinite;
+  text-shadow: 1px 0px 4px #d1d5f4, 2px 0px 4px #ffd5ff, 3px 0px 4px #ffd5ff, 2px 0px 3px #d42cca, 2px 3px 15px #d42cca, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #d42cca, 40px 0vw 200px #d42cca;
 }
 
+@keyframes flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 0.99;
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.4;
+  }
+}
 .navbar {
   position: absolute;
   padding: 30px;
@@ -73,7 +84,7 @@ header h1 {
   width: 35px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 940px) {
   .navbar {
     padding: 0;
   }
@@ -96,6 +107,7 @@ header h1 {
     align-items: center;
     margin-left: -100%;
     transition: all 0.5s ease-in-out;
+    z-index: 1;
   }
   .nav-links ul {
     display: flex;
@@ -107,6 +119,7 @@ header h1 {
     top: 25px;
     position: absolute;
     right: 25px;
+    z-index: 2;
   }
   .navbar .nav-links ul li {
     margin: 25px 0;
@@ -139,8 +152,11 @@ h2 {
 h2,
 p,
 .button,
-a {
+a,
+h3 {
   font-family: "Manrope", sans-serif;
+  font-weight: 100;
+  text-transform: lowercase;
 }
 
 .button {
@@ -170,16 +186,13 @@ section .color-buttons {
   flex-wrap: wrap;
 }
 section .color-buttons button {
-  width: 13em;
+  width: 16em;
+  margin: 0.2em;
 }
 
 section,
 footer {
   padding: 1em;
-}
-
-.photos {
-  width: 25%;
 }
 
 footer {
@@ -196,7 +209,7 @@ footer {
 .menu-hamburger span {
   display: block;
   position: absolute;
-  height: 4px;
+  height: 3px;
   width: 100%;
   background: #d1d5f4;
   border-radius: 9px;
@@ -237,4 +250,40 @@ footer {
   top: 18px;
   width: 0%;
   left: 50%;
+}
+
+/* SECTIONS */
+section h1 {
+  color: #ffeffd;
+  font-size: 2.5em;
+  margin: 0.3em;
+  animation: flicker 3s linear infinite;
+  text-transform: uppercase;
+  text-shadow: 1px 0px 4px #d1d5f4, 2px 0px 4px #ffd5ff, 3px 0px 4px #ffd5ff, 2px 0px 3px #d42cca, 2px 3px 15px #d42cca, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #d42cca, 40px 0vw 200px #d42cca;
+}
+
+.abyssal,
+.offf {
+  text-align: right;
+}
+
+.column {
+  display: flex;
+  align-items: center;
+}
+.column .subcolumn:nth-child(1) {
+  width: 60%;
+}
+.column .subcolumn:nth-child(1) p {
+  text-align: left;
+}
+.column .subcolumn:nth-child(2) {
+  width: 40%;
+}
+.column .subcolumn:nth-child(2) img {
+  width: 85%;
+}
+.column .subcolumn:nth-child(2) img:hover {
+  transform: scale(1.1);
+  animation: scale ease-in-out 0.5s;
 }/*# sourceMappingURL=style.css.map */
