@@ -19,7 +19,13 @@
                 </ul>
             </div>
             
-            <img src="img/menu-btn.png" alt="Menu hamburger" class="menu-hamburger">
+            <!-- <img src="img/menu-btn.png" alt="Menu hamburger" class="menu-hamburger"> -->
+            <div class="menu-hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
         </nav>
 
         <header>
@@ -97,6 +103,11 @@
         menuHamburger.addEventListener('click',()=>{
         navLinks.classList.toggle('mobile-menu')
         })
+
+        menuHamburger.addEventListener('click',()=>{
+        menuHamburger.classList.toggle('open')
+        })
+        
 </script>
 
 </html>
