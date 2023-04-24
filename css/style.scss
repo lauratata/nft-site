@@ -21,6 +21,14 @@ body {
     color: $purple;
 }
 
+a,
+.nav-links ul li a {
+    color: $purple;
+    &:hover {
+        color: $pink;
+    }
+}
+
 button {
     font-size: 100%;
     text-transform: uppercase;
@@ -47,7 +55,7 @@ header {
     justify-content: center;
     & h1 {
         margin: 1em;
-        font-size: 3.5em;
+        font-size: 3em;
         color: #ffeffd;
         animation: flicker 3s linear infinite;
         text-shadow: 1px 0px 4px $purple, 2px 0px 4px #ffd5ff, 3px 0px 4px #ffd5ff, 2px 0px 3px #d42cca,
@@ -145,6 +153,7 @@ header {
     .navbar .nav-links ul li {
         margin: 25px 0;
         font-size: 1.5em;
+        padding: 0.3em;
     }
 }
 
@@ -180,6 +189,10 @@ h3 {
     font-family: $p;
     font-weight: 100;
     text-transform: lowercase;
+}
+
+button {
+    cursor: pointer;
 }
 
 .button {
@@ -219,12 +232,29 @@ section .color-buttons {
 
 section,
 footer {
-    padding: 1em;
+    padding: 1.5em;
 }
 
 footer {
     background-color: $footer;
     margin-top: 1em;
+    & .flex {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 5em;
+        & p {
+            display: flex;
+            align-items: center;
+        }
+        & .mdftlogo {
+            width: 2em;
+            margin-right: 5px;
+        }
+        & .websites img {
+            width: 3em;
+        }
+    }
 }
 
 /* MENU HAMBURGER  */
@@ -303,7 +333,7 @@ footer {
 
 section h1 {
     color: #ffeffd;
-    font-size: 2.5em;
+    font-size: 2em;
     margin: 0.3em;
     animation: flicker 3s linear infinite;
     text-transform: uppercase;
@@ -348,8 +378,8 @@ section {
 .waves2 {
     background-image: url(../img/waves.png);
     background-size: cover;
-    width: 500px;
-    height: 200px;
+    width: 18em;
+    height: 8em;
     position: absolute;
     opacity: 40%;
 }
