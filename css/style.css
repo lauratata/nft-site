@@ -40,7 +40,7 @@ header {
 }
 header h1 {
   margin: 1em;
-  font-size: 4em;
+  font-size: 3.5em;
   color: #ffeffd;
   animation: flicker 3s linear infinite;
   text-shadow: 1px 0px 4px #d1d5f4, 2px 0px 4px #ffd5ff, 3px 0px 4px #ffd5ff, 2px 0px 3px #d42cca, 2px 3px 15px #d42cca, 2px 0px 15px, 5px 0px 125px, 20px 0vw 200px #d42cca, 40px 0vw 200px #d42cca;
@@ -168,7 +168,7 @@ h3 {
   text-transform: uppercase;
 }
 
-.button:hover {
+button:hover {
   border: solid #dd10c0 1px;
   color: #dd10c0;
 }
@@ -189,6 +189,11 @@ section .color-buttons button {
   width: 16em;
   margin: 0.2em;
 }
+section .color-buttons button:active {
+  background-color: #d1d5f4;
+  color: #1e1674;
+  border: none;
+}
 
 section,
 footer {
@@ -197,6 +202,7 @@ footer {
 
 footer {
   background-color: #1838de;
+  margin-top: 1em;
 }
 
 /* MENU HAMBURGER  */
@@ -267,6 +273,11 @@ section h1 {
   text-align: right;
 }
 
+.abyssal,
+section {
+  position: relative;
+}
+
 .column {
   display: flex;
   align-items: center;
@@ -286,4 +297,24 @@ section h1 {
 .column .subcolumn:nth-child(2) img:hover {
   transform: scale(1.1);
   animation: scale ease-in-out 0.5s;
+}
+
+/* WAVES */
+.waves,
+.waves2 {
+  background-image: url(../img/waves.png);
+  background-size: cover;
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  opacity: 40%;
+}
+
+.waves {
+  right: 0;
+}
+
+.waves2 {
+  left: 0;
+  transform: scaleX(-1);
 }/*# sourceMappingURL=style.css.map */

@@ -6,7 +6,7 @@ $footer: #1838de;
 
 /* TYPOGRAPHIES */
 @import url("https://fonts.googleapis.com/css2?family=Bruno+Ace&family=Manrope:wght@200;300;400;500;600;700;800&family=Tilt+Neon&display=swap");
-$title: 'Bruno Ace', cursive;
+$title: "Bruno Ace", cursive;
 $p: "Manrope", sans-serif;
 
 * {
@@ -47,7 +47,7 @@ header {
     justify-content: center;
     & h1 {
         margin: 1em;
-        font-size: 4em;
+        font-size: 3.5em;
         color: #ffeffd;
         animation: flicker 3s linear infinite;
         text-shadow: 1px 0px 4px $purple, 2px 0px 4px #ffd5ff, 3px 0px 4px #ffd5ff, 2px 0px 3px #d42cca,
@@ -190,7 +190,7 @@ h3 {
     text-align: center;
     text-transform: uppercase;
 }
-.button:hover {
+button:hover {
     border: solid $pink 1px;
     color: $pink;
 }
@@ -209,6 +209,11 @@ section .color-buttons {
     & button {
         width: 16em;
         margin: 0.2em;
+        &:active {
+            background-color: $purple;
+            color: $background-color;
+            border: none;
+        }
     }
 }
 
@@ -219,6 +224,7 @@ footer {
 
 footer {
     background-color: $footer;
+    margin-top: 1em;
 }
 
 /* MENU HAMBURGER  */
@@ -310,6 +316,11 @@ section h1 {
     text-align: right;
 }
 
+.abyssal,
+section {
+    position: relative;
+}
+
 .column {
     display: flex;
     align-items: center;
@@ -329,4 +340,25 @@ section h1 {
             animation: scale ease-in-out 0.5s;
         }
     }
+}
+
+/* WAVES */
+
+.waves,
+.waves2 {
+    background-image: url(../img/waves.png);
+    background-size: cover;
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    opacity: 40%;
+}
+
+.waves {
+    right: 0;
+}
+
+.waves2 {
+    left: 0;
+    transform: scaleX(-1);
 }
